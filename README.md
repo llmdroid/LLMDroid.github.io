@@ -1,5 +1,5 @@
-# Academic Project Page Template
-This is an academic paper project page template.
+# LLMDroid Page
+Welcome to LLMDroid Page.
 
 
 Example project pages built using this template are:
