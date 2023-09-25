@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Welcome to LLMdroid!</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -36,6 +36,13 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  
+  <!-- Include DataTables CSS and JS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+  <!-- Include Select2 CSS and JS -->
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -52,7 +59,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">Welcome to LLMdroid!</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -71,7 +78,7 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+                      <!-- Arxiv PDF link -->
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -123,22 +130,23 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Overview Page -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+        <!-- <source src="static/videos/banner_video.mp4" -->
+        <!-- type="video/mp4"> -->
+      <!-- </video> -->
+      <img src="static/images/overview.jpg" alt="MY ALT TEXT" />
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        The overall architecture of the project. And anything that can introduce it!
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End Overview Page -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +156,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Abstract of this paper and this project!Abstract of this paper and this project!Abstract of this paper and this project!Abstract of this paper and this project!Abstract of this paper and this project!Abstract of this paper and this project!
           </p>
         </div>
       </div>
@@ -157,122 +165,284 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
+<!-- Video Demo Section -->
+<section class="hero is-small" id="videoSection">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+      <!-- Title -->
+      <h2 class="title is-3">Task Video Demo</h2>
+      <div class="columns is-multiline is-variable is-1-desktop">
+        
+        <!-- Video 1 -->
+        <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4" >
+          </video>
+          <div class="video-description">
+            Description for the first video goes here.
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4">
+          </video>
+          <div class="video-description">
+            Description for the second video goes here.
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4">
+          </video>
+          <div class="video-description">
+            Description for the third video goes here.
+          </div>
+        </div>
+
+        <!-- Video 4 -->
+        <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4">
+          </video>
+          <div class="video-description">
+            Description for the fourth video goes here.
+          </div>
+        </div>
+
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
+</section>
+
+<style>
+.video-description {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+</style>
+<!-- End Video Demo -->
+
+<!-- Table Section -->
+<section class="section" id="tableSection">
+  <div class="container">
+      <h2 class="title">Dataset Information</h2>
+      <table id="filterTable">
+          <tr>
+              <th>
+                <select id="filterDropdown1" onchange="filterTable()">
+                      <option value="">All Datasets</option>
+                      <option value="AITW">AITW</option>
+                      <option value="Dataset 2">Dataset 2</option>
+                      <option value="Dataset 3">Dataset 3</option>
+                  </select>
+              </th>
+              <th>
+                <select id="filterDropdown2" onchange="filterTable()">
+                  <option value="">All Categories</option>
+                  <option value="GoogleApps">GoogleApps</option>
+                  <option value="Install">Install</option>
+                  <option value="Webshopping">Webshopping</option>
+                </select>
+              </th>
+              <th>
+                <select id="filterDropdown3" onchange="filterTable()">
+                  <option value="">All Task Steps</option>
+                  <option value="task 1">task 1</option>
+                  <option value="task 2">task 2</option>
+                  <option value="task 3">task 3</option>
+                </select>
+              </th>
+              <th>Task Description</th>
+          </tr>
+          <tr>
+              <td>AITW</td>
+              <td>GoogleApps</td>
+              <td>task 1</td>
+              <td>xxx</td>
+          </tr>
+          <tr>
+              <td>AITW</td>
+              <td>GoogleApps</td>
+              <td>task 2</td>
+              <td>xxx</td>
+          </tr>
+          <tr>
+              <td>AITW</td>
+              <td>GoogleApps</td>
+              <td>task 3</td>
+              <td>xxx</td>
+          </tr>
+          <tr>
+              <td>AITW</td>
+              <td>Install</td>
+              <td>task 1</td>
+              <td>xxx</td>
+          </tr>
+          <tr>
+              <td>AITW</td>
+              <td>Install</td>
+              <td>task 2</td>
+              <td>xxx</td>
+          </tr>
+          <tr>
+              <td>AITW</td>
+              <td>Install</td>
+              <td>task 3</td>
+              <td>xxx</td>
+          </tr>
+          <tr>
+              <td>AITW</td>
+              <td>Webshopping</td>
+              <td>task 1</td>
+              <td>xxx</td>
+        </tr>
+        <tr>
+              <td>AITW</td>
+              <td>Webshopping</td>
+              <td>task 2</td>
+              <td>xxx</td>
+        </tr>
+        <tr>
+              <td>AITW</td>
+              <td>Webshopping</td>
+              <td>task 3</td>
+              <td>xxx</td>
+        </tr>
+    </table>
 </div>
 </section>
-<!-- End image carousel -->
+<!-- End Table Section -->
 
+<!-- Table Style -->
+<style>
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
 
+  th,
+  td {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding: 8px;
+  }
 
+  th {
+      background-color: #f2f2f2;
+  }
+</style>
+<!-- End Table Style-->
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Table Scripts -->
+<script type="text/javascript">
+  function filterTable() {
+    var dropdown1 = document.getElementById("filterDropdown1");
+    var dropdown2 = document.getElementById("filterDropdown2");
+    var dropdown3 = document.getElementById("filterDropdown3");
+    var table = document.getElementById("filterTable");
+    var rows = table.getElementsByTagName("tr");
+
+    for (var i = 1; i < rows.length; i++) {  // Start at 1 to skip table header
+      var cells = rows[i].getElementsByTagName("td");
+      var filterValue1 = dropdown1.value;
+      var filterValue2 = dropdown2.value;
+      var filterValue3 = dropdown3.value;
+
+      if (cells.length > 0) {
+        var cellValue1 = cells[0].textContent || cells[0].innerText;
+        var cellValue2 = cells[1].textContent || cells[1].innerText;
+        var cellValue3 = cells[2].textContent || cells[2].innerText;
+
+        if ((filterValue1 === "" || cellValue1 === filterValue1) &&
+            (filterValue2 === "" || cellValue2 === filterValue2) &&
+            (filterValue3 === "" || cellValue3 === filterValue3)) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
+  }
+</script>
+<!-- End Table Scripts -->
+
+<!-- Dropdown box -->
+<section class="section" id="TaskSelection">
+  <div class="container">
+    <!-- Title -->
+    <h2 class="title is-3">Task Selection</h2>
+    <div class="columns is-multiline is-variable is-1-desktop">
+    <form id="task-form">
+      <div class="field">
+        <label class="label">Select a Task</label>
+        <div class="control">
+          <div class="select">
+            <select id="task-dropdown" name="task" onchange="updateDescription()">
+              <option value="" disabled selected>None</option>
+              <option value="Task 1 DescriptionTask 1 DescriptionTask 1 DescriptionTask 1 DescriptionTask 1 Description">Task 1</option>
+              <option value="Task 2 Description">Task 2</option>
+              <option value="Task 3 Description">Task 3</option>
+              <!-- ... add more tasks as needed ... -->
+            </select>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+      <div class="field">
+        <label class="label">Task Description</label>
+        <div class="control">
+          <p id="task-description"></p>
         </div>
       </div>
-    </div>
+      
+      <div class="field">
+        <div class="control">
+          <button type="submit" class="button is-link">Submit</button>
+        </div>
+      </div>
+    </form>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End Dropdown box-->
 
+<!-- Dropdown Script -->
+<script type="text/javascript">
+  function updateDescription() {
+    var dropdown = document.getElementById('task-dropdown');
+    var description = document.getElementById('task-description');
+    description.innerText = dropdown.value;
+  }
+</script>
+<!-- End Dropdown Script-->
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
-
+<!-- Dropdown Style-->
+<title>Task Selector</title>
+<style>
+  #task-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1200px; /* Fixed width */
+  }
+  .field:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .submit-button {
+    background-color: grey; /* Grey background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+</style>
+<!--End Dropdown Style -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
