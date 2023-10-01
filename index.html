@@ -42,14 +42,24 @@
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
   <!-- Include Select2 CSS and JS -->
   <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
 </head>
 <body>
 
@@ -165,70 +175,34 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Video Demo Section -->
-<section class="hero is-small" id="videoSection">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Title -->
-      <h2 class="title is-3">Task Video Demo</h2>
-      <div class="columns is-multiline is-variable is-1-desktop">
-        
-        <!-- Video 1 -->
-        <div class="column is-one-quarter">
-          <video class="video" controls autoplay playsinline muted loop>
-            <source src="./static/videos/task1.mp4" type="video/mp4" >
-          </video>
-          <div class="video-description">
-            Description for the first video goes here.
-          </div>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="column is-one-quarter">
-          <video class="video" controls autoplay playsinline muted loop>
-            <source src="./static/videos/task1.mp4" type="video/mp4">
-          </video>
-          <div class="video-description">
-            Description for the second video goes here.
-          </div>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="column is-one-quarter">
-          <video class="video" controls autoplay playsinline muted loop>
-            <source src="./static/videos/task1.mp4" type="video/mp4">
-          </video>
-          <div class="video-description">
-            Description for the third video goes here.
-          </div>
-        </div>
-
-        <!-- Video 4 -->
-        <div class="column is-one-quarter">
-          <video class="video" controls autoplay playsinline muted loop>
-            <source src="./static/videos/task1.mp4" type="video/mp4">
-          </video>
-          <div class="video-description">
-            Description for the fourth video goes here.
-          </div>
-        </div>
-
+<!--Owl Slider Section-->
+<div class="video-container">
+  <section class = video-section>
+    <h2 class="title">Task Videos</h2>
+    <div class="owl-carousel owl-theme">
+      <div class="item video-item">
+          <video src="static/videos/task1.mp4" controls></video>
+          <p>Description for video 1</p>
+      </div>
+      <div class="item video-item">
+          <video src="static/videos/task1.mp4" controls></video>
+          <p>Description for video 2</p>
+      </div>
+      <div class="item video-item">
+        <video src="static/videos/task1.mp4" controls></video>
+        <p>Description for video 3</p>
+      </div>
+      <div class="item video-item">
+          <video src="static/videos/task1.mp4" controls></video>
+          <p>Description for video 4</p>
       </div>
     </div>
-  </div>
-</section>
-
-<style>
-.video-description {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 0.9em;
-  color: #555;
-}
-</style>
-<!-- End Video Demo -->
+  </section>
+</div>
+<!--End Owl Slider Section-->
 
 <!-- Table Section -->
+<div class = video-container>
 <section class="section" id="tableSection">
   <div class="container">
       <h2 class="title">Dataset Information</h2>
@@ -248,72 +222,50 @@
                   <option value="GoogleApps">GoogleApps</option>
                   <option value="Install">Install</option>
                   <option value="Webshopping">Webshopping</option>
+                  <option value="Webshopping">General</option>
                 </select>
               </th>
-              <th>
+              <!-- <th>
                 <select id="filterDropdown3" onchange="filterTable()">
-                  <option value="">All Task Steps</option>
+                  <option value="">Average Step Number</option>
                   <option value="task 1">task 1</option>
                   <option value="task 2">task 2</option>
                   <option value="task 3">task 3</option>
                 </select>
-              </th>
-              <th>Task Description</th>
+              </th> -->
+              <th>Average Step Number</th>
+              <th>Task Details</th>
           </tr>
           <tr>
               <td>AITW</td>
               <td>GoogleApps</td>
-              <td>task 1</td>
-              <td>xxx</td>
-          </tr>
-          <tr>
-              <td>AITW</td>
-              <td>GoogleApps</td>
-              <td>task 2</td>
-              <td>xxx</td>
-          </tr>
-          <tr>
-              <td>AITW</td>
-              <td>GoogleApps</td>
-              <td>task 3</td>
-              <td>xxx</td>
+              <td>7</td>
+              <td><a href="https://example.com/task1-description" target="_blank">GoogleApps Table Link</a></td>
           </tr>
           <tr>
               <td>AITW</td>
               <td>Install</td>
-              <td>task 1</td>
-              <td>xxx</td>
-          </tr>
-          <tr>
-              <td>AITW</td>
-              <td>Install</td>
-              <td>task 2</td>
-              <td>xxx</td>
-          </tr>
-          <tr>
-              <td>AITW</td>
-              <td>Install</td>
-              <td>task 3</td>
-              <td>xxx</td>
+              <td>8</td>
+              <td><a href="https://example.com/task1-description" target="_blank">Install Table Link</a></td>
           </tr>
           <tr>
               <td>AITW</td>
               <td>Webshopping</td>
-              <td>task 1</td>
-              <td>xxx</td>
-        </tr>
-        <tr>
-              <td>AITW</td>
-              <td>Webshopping</td>
-              <td>task 2</td>
-              <td>xxx</td>
-        </tr>
-        <tr>
-              <td>AITW</td>
-              <td>Webshopping</td>
-              <td>task 3</td>
-              <td>xxx</td>
-        </tr>
+              <td>9</td>
+              <td><a href="https://example.com/task1-description" target="_blank">Webshopping Table Link</a></td>
+          </tr>
+          <tr>
+            <td>AITW</td>
+            <td>Single</td>
+            <td>10</td>
+            <td><a href="https://example.com/task1-description" target="_blank">Single Table Link</a></td>
+          </tr>
+          <tr>
+            <td>AITW</td>
+            <td>General</td>
+            <td>11</td>
+            <td><a href="https://example.com/task1-description" target="_blank">General Table Link</a></td>
+          </tr>
     </table>
 </div>
 </section>
@@ -324,6 +276,7 @@
   table {
       width: 100%;
       border-collapse: collapse;
+      margin: auto;
   }
 
   th,
@@ -344,7 +297,7 @@
   function filterTable() {
     var dropdown1 = document.getElementById("filterDropdown1");
     var dropdown2 = document.getElementById("filterDropdown2");
-    var dropdown3 = document.getElementById("filterDropdown3");
+    // var dropdown3 = document.getElementById("filterDropdown3");
     var table = document.getElementById("filterTable");
     var rows = table.getElementsByTagName("tr");
 
@@ -352,16 +305,22 @@
       var cells = rows[i].getElementsByTagName("td");
       var filterValue1 = dropdown1.value;
       var filterValue2 = dropdown2.value;
-      var filterValue3 = dropdown3.value;
+      // var filterValue3 = dropdown3.value;
 
       if (cells.length > 0) {
         var cellValue1 = cells[0].textContent || cells[0].innerText;
         var cellValue2 = cells[1].textContent || cells[1].innerText;
-        var cellValue3 = cells[2].textContent || cells[2].innerText;
+        // var cellValue3 = cells[2].textContent || cells[2].innerText;
 
+        // if ((filterValue1 === "" || cellValue1 === filterValue1) &&
+        //     (filterValue2 === "" || cellValue2 === filterValue2) &&
+        //     (filterValue3 === "" || cellValue3 === filterValue3)) {
+        //   rows[i].style.display = "";
+        // } else {
+        //   rows[i].style.display = "none";
+        // }
         if ((filterValue1 === "" || cellValue1 === filterValue1) &&
-            (filterValue2 === "" || cellValue2 === filterValue2) &&
-            (filterValue3 === "" || cellValue3 === filterValue3)) {
+            (filterValue2 === "" || cellValue2 === filterValue2)) {
           rows[i].style.display = "";
         } else {
           rows[i].style.display = "none";
@@ -376,7 +335,7 @@
 <section class="section" id="TaskSelection">
   <div class="container">
     <!-- Title -->
-    <h2 class="title is-3">Task Selection</h2>
+    <h2 class="title">Task Selection</h2>
     <div class="columns is-multiline is-variable is-1-desktop">
     <form id="task-form">
       <div class="field">
@@ -422,7 +381,7 @@
 <!-- End Dropdown Script-->
 
 <!-- Dropdown Style-->
-<title>Task Selector</title>
+
 <style>
   #task-form {
     background-color: #ffffff;
@@ -432,6 +391,7 @@
     width: 1200px; /* Fixed width */
   }
   .field:not(:last-child) {
+    margin-top: auto;
     margin-bottom: 20px;
   }
   .submit-button {
@@ -477,6 +437,69 @@
 <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
     <!-- End of Statcounter Code -->
+
+<!-- Video Demo Section -->
+<!-- <section class="hero is-small" id="videoSection">
+  <div class="hero-body">
+    <div class="container"> -->
+      <!-- Title -->
+      <!-- <h2 class="title is-3">Task Video Demo</h2>
+      <div class="columns is-multiline is-variable is-1-desktop"> -->
+        
+        <!-- Video 1 -->
+        <!-- <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4" >
+          </video>
+          <div class="video-description">
+            Description for the first video goes here.
+          </div>
+        </div> -->
+
+        <!-- Video 2 -->
+        <!-- <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4">
+          </video>
+          <div class="video-description">
+            Description for the second video goes here.
+          </div>
+        </div> -->
+
+        <!-- Video 3 -->
+        <!-- <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4">
+          </video>
+          <div class="video-description">
+            Description for the third video goes here.
+          </div>
+        </div> -->
+
+        <!-- Video 4 -->
+        <!-- <div class="column is-one-quarter">
+          <video class="video" controls autoplay playsinline muted loop>
+            <source src="./static/videos/task1.mp4" type="video/mp4">
+          </video>
+          <div class="video-description">
+            Description for the fourth video goes here.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.video-description {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #555;
+}
+</style>  -->
+<!-- End Video Demo -->
 
   </body>
   </html>
